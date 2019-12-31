@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private Rigidbody2D _rigid;
     [SerializeField]
     private float _jumpForce = 5.0f;
     private bool _resetJump = false;
+    private bool _grounded = false;
     [SerializeField]
     private float _speed = 2.5f;
+    private PlayerAnimation _playerAnim;
+
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>() as Rigidbody2D;
+        _rigid = GetComponent<Rigidbody2D>();
+        _playerAnim = GetComponent<PlayerAnimation>();
     }
 
     // Update is called once per frame
@@ -24,22 +28,34 @@ public class Player : MonoBehaviour
 
     void Movement()
     {
-        float move = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(move * _speed, rb.velocity.y);     
+        float move = Input.GetAxisRaw("Horizontal");  
+        isGrounded();
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded()){
-            rb.velocity = new Vector2(rb.velocity.x, _jumpForce);
+        if(move != 0)
+            _playerAnim.Flip(move);
+
+        if (Input.GetKeyDown(KeyCode.Space) && _grounded){
+            _rigid.velocity = new Vector2(_rigid.velocity.x, _jumpForce);
             StartCoroutine(ResetJumpRoutine());
+            _playerAnim.Jump(true);
         }
+
+        _rigid.velocity = new Vector2(move * _speed, _rigid.velocity.y);
+        _playerAnim.Move(move);
     }
-    bool isGrounded()
+
+    void isGrounded()
     {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 0.6f, 1 << 8);
-        if (hitInfo.collider != null)
-            if(!_resetJump)
-                return true;
-
-        return false;
+        if (hitInfo.collider != null){
+            if(!_resetJump){
+                _playerAnim.Jump(false);
+                _grounded = true;
+                return;
+            }
+        }
+        _grounded = false;
+        return;
     }
     IEnumerator ResetJumpRoutine()
     {

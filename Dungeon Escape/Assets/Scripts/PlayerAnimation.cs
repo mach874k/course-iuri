@@ -1,0 +1,30 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerAnimation : MonoBehaviour
+{
+    private Animator _anim;
+    private SpriteRenderer _sprite;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        _anim = GetComponentInChildren<Animator>();
+        _sprite = GetComponentInChildren<SpriteRenderer>();
+    }
+
+    // Update is called once per frame
+    public void Move(float move)
+    {
+        _anim.SetFloat("Move", Mathf.Abs(move));
+    }
+
+    public void Flip(float move){
+        _sprite.flipX = (move > 0)? false : true;
+    }
+
+    public void Jump(bool jumping){
+        _anim.SetBool("Jumping", jumping);
+    }
+}
