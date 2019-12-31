@@ -24,6 +24,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
+
+        if(Input.GetMouseButtonDown(0) && _grounded){
+            _playerAnim.Attack();
+        }
     }
 
     void Movement()
@@ -46,7 +50,8 @@ public class Player : MonoBehaviour
 
     void isGrounded()
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 0.6f, 1 << 8);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 1f, 1 << 8);
+        Debug.DrawRay(transform.position, Vector2.down, Color.green);
         if (hitInfo.collider != null){
             if(!_resetJump){
                 _playerAnim.Jump(false);
