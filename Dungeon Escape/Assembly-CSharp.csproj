@@ -70,6 +70,12 @@
  <Reference Include="Unity.Analytics.DataPrivacy">
  <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Arquivos de Programas/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>
