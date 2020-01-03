@@ -53,8 +53,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\PlayerAnimation.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Enemy\MossGiant.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Spider.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerAnimation.cs" />
+ <Reference Include="Cinemachine">
+ <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -64,17 +70,14 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
  <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Arquivos de Programas/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
