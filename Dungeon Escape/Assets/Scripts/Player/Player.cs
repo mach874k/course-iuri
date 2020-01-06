@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
     private Rigidbody2D _rigid;
     [SerializeField]
@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private bool _grounded = false;
     [SerializeField]
     private float _speed = 2.5f;
+    public int Health { get; set; }
     private PlayerAnimation _playerAnim;
 
     // Start is called before the first frame update
@@ -67,5 +68,10 @@ public class Player : MonoBehaviour
         _resetJump = true;
         yield return new WaitForSeconds(0.1f);
         _resetJump = false;
+    }
+
+    public void Damage()
+    {
+        Debug.Log("Player Damage");
     }
 }

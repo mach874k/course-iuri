@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour, IDamageable
 {
     [SerializeField]
     protected int health;
+    public int Health { get; set; }
     [SerializeField]
     protected float speed;
     [SerializeField]
@@ -35,6 +36,7 @@ public abstract class Enemy : MonoBehaviour
             return;
         }
         Movement();
+        FaceEnemy();
     }
 
     public virtual void Movement()
@@ -61,6 +63,26 @@ public abstract class Enemy : MonoBehaviour
         if(distance > 2.0){
             isHit = false;
             anim.SetBool("InCombat", false);
+        }
+    }
+
+    public virtual void Damage()
+    {
+        Debug.Log(gameObject.name + " get Damaged");
+        Health--;
+        isHit = true;
+        anim.SetBool("InCombat", true);
+        anim.SetTrigger("Hit");
+        if(Health < 1){
+            anim.SetTrigger("Death");
+            Destroy(this.gameObject);
+        }
+    }
+    public virtual void FaceEnemy()
+    {
+        if(anim.GetBool("InCombat")){
+            Vector3 direction = player.transform.localPosition - transform.localPosition;
+            sprite.flipX = (direction.x > 0)? false : true; 
         }
     }
 }
