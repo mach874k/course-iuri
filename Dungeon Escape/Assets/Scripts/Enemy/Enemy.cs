@@ -14,6 +14,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     [SerializeField]
     protected Transform pointA, pointB;
     protected bool isHit = false;
+    protected bool isDead = false;
     protected SpriteRenderer sprite;
     protected Animator anim;
     protected Vector3 currentTarget;
@@ -35,8 +36,11 @@ public abstract class Enemy : MonoBehaviour, IDamageable
         if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && !anim.GetBool("InCombat")){
             return;
         }
-        Movement();
-        FaceEnemy();
+
+        if(!isDead){
+            Movement();
+            FaceEnemy();
+        }
     }
 
     public virtual void Movement()
@@ -75,7 +79,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
         anim.SetTrigger("Hit");
         if(Health < 1){
             anim.SetTrigger("Death");
-            Destroy(this.gameObject);
+            isDead = true;
         }
     }
     public virtual void FaceEnemy()
