@@ -19,6 +19,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     protected Animator anim;
     protected Vector3 currentTarget;
     protected Player player;
+    public GameObject diamondEffectPrefab;
 
     public virtual void Init()
     {
@@ -72,6 +73,9 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 
     public virtual void Damage()
     {
+        if(isDead)
+            return;
+
         Debug.Log(gameObject.name + " get Damaged");
         Health--;
         isHit = true;
@@ -80,6 +84,8 @@ public abstract class Enemy : MonoBehaviour, IDamageable
         if(Health < 1){
             anim.SetTrigger("Death");
             isDead = true;
+            GameObject diamondObject = Instantiate(diamondEffectPrefab, transform.position, Quaternion.identity) as GameObject;
+            diamondObject.GetComponent<Diamond>().gems = gems;
         }
     }
     public virtual void FaceEnemy()

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour, IDamageable
     private bool _grounded = false;
     [SerializeField]
     private float _speed = 2.5f;
+    public int _diamonds;
     public int Health { get; set; }
     private PlayerAnimation _playerAnim;
 
