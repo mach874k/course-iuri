@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\IDamageable.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAnimation.cs" />
+     <Compile Include="Assets\Scripts\Shop\Shop.cs" />
  <Reference Include="Cinemachine">
  <HintPath>D:/Desktop/mach874k/course-iuri/Dungeon Escape/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
