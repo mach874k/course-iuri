@@ -21,19 +21,6 @@ public class Spider : Enemy, IDamageable
         //do nothing
     }
 
-/*
-    public override void Damage()
-    {
-        Debug.Log(gameObject.name + " get Damaged");
-        Health--;
-        
-        if(Health < 1){
-            anim.SetTrigger("Death");
-            isDead = true;
-            GameObject diamondObject = Instantiate(diamondEffectPrefab, transform.position, Quaternion.identity) as GameObject;
-            diamondObject.GetComponent<Diamond>().gems = gems;
-        }
-    } */
     public void Attack()
     {
         Instantiate(acidEffectPrefab, transform.position, Quaternion.identity);

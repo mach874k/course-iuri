@@ -11,6 +11,7 @@ public class Player : MonoBehaviour, IDamageable
     private bool _grounded = false;
     [SerializeField]
     private float _speed = 2.5f;
+    private bool isDead = false;
     public int _diamonds;
     public int Health { get; set; }
     private PlayerAnimation _playerAnim;
@@ -20,11 +21,15 @@ public class Player : MonoBehaviour, IDamageable
     {
         _rigid = GetComponent<Rigidbody2D>();
         _playerAnim = GetComponent<PlayerAnimation>();
+        Health = 4;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(isDead)
+            return;
+
         Movement();
 
         if(Input.GetMouseButtonDown(0) && _grounded){
@@ -73,6 +78,20 @@ public class Player : MonoBehaviour, IDamageable
 
     public void Damage()
     {
-        Debug.Log("Player Damage");
+        if(isDead)
+            return;
+            
+        Health--;
+        UIManager.Instance.UpdateLives(Health);
+        if(1 > Health){
+            _playerAnim.Death();
+            isDead = true;
+        }
+    }
+
+    public void AddGems(int amount)
+    {
+        _diamonds += amount;
+        UIManager.Instance.UpdateGemCount(_diamonds);
     }
 }
