@@ -7,12 +7,12 @@ public class AdsManager : MonoBehaviour
     public void ShowRewardedAd()
     {
         Debug.Log("ShowRewardedAd");
-        if(Advertisement.IsReady("video")){
+        if(Advertisement.IsReady("rewardedVideo")){
             Debug.Log("No if");
-            /*var options = new ShowOptions{
+            var options = new ShowOptions{
                 resultCallback = HandleShowResult
-            };*/
-            Advertisement.Show();
+            };
+            Advertisement.Show("rewardedVideo");
         }else {
             Debug.Log("Deu ruim");
         }
