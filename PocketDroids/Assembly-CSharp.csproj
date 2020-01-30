@@ -588,10 +588,14 @@
      <Compile Include="Assets\Mapbox SDK\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\ARUserAnchor.cs" />
      <Compile Include="Assets\Mapbox SDK\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\UnityARSessionNativeInterface.cs" />
      <Compile Include="Assets\Mapbox SDK\UnityARKitPlugin\UnityARKitPluginSettings.cs" />
-     <Compile Include="Assets\Models\Droids\Droids.cs" />
+     <Compile Include="Assets\Models\Droids\Droid.cs" />
      <Compile Include="Assets\Models\Player\Scripts\Player.cs" />
      <Compile Include="Assets\Scenes\World\UIManager.cs" />
+     <Compile Include="Assets\Scenes\World\WorldSceneManager.cs" />
      <Compile Include="Assets\Utilities\DroidFactory.cs" />
+     <Compile Include="Assets\Utilities\GameManager.cs" />
+     <Compile Include="Assets\Utilities\PocketDroidsConstants.cs" />
+     <Compile Include="Assets\Utilities\PocketDroidsSceneManager.cs" />
      <Compile Include="Assets\Utilities\Singleton.cs" />
      <None Include="Assets\Mapbox SDK\Mapbox\Unity\Location\ExampleGpsTraces\LocationProviderAndroidNative.txt" />
      <None Include="Assets\Mapbox SDK\UnityARInterface\Examples\Common\Shaders\MobileOcclusion.shader" />
