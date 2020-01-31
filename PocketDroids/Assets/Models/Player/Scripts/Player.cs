@@ -23,6 +23,10 @@ public class Player : MonoBehaviour {
 		get { return requiredXP; }
 	}
 
+	public int LevelBase {
+		get { return levelBase; }
+	}
+	
 	public int Level {
 		get { return level; }
 	}
@@ -32,7 +36,7 @@ public class Player : MonoBehaviour {
 	}
 
 	public void AddXP(int xp){
-		this.xp = Mathf.Max(0, xp);
+		this.xp += Mathf.Max(0, xp);
 	}
 
 	public void AddDroids(GameObject droid){
