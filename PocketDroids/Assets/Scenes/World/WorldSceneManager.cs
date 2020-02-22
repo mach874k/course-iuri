@@ -12,6 +12,8 @@ public class WorldSceneManager : PocketDroidsSceneManager
     }
 
     public override void droidTapped(GameObject droid){
-        SceneManager.LoadScene(PocketDroidsConstants.SCENE_CAPTURE, LoadSceneMode.Additive);
+        List<GameObject> list = new List<GameObject>();
+        list.Add(droid);
+        SceneTransitionManager.Instance.GoToScene(PocketDroidsConstants.SCENE_CAPTURE, list);
     }
 }

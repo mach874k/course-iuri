@@ -9,11 +9,13 @@ public class Player : MonoBehaviour {
 	[SerializeField] private int xp = 0;
 	[SerializeField] private int requiredXP = 100;
 	[SerializeField] private int levelBase = 100;
-	[SerializeField] private int level = 1;
 	[SerializeField] private List<GameObject> droids = new List<GameObject>();
 
+	private int level = 1;
+	private string path;
 	private void Start() {
-		InitLevelData();
+		path = Application.persistentDataPath + "/player.dat";
+		Load();
 	}
 	public int Xp {
 		get { return xp; }
@@ -37,10 +39,14 @@ public class Player : MonoBehaviour {
 
 	public void AddXP(int xp){
 		this.xp += Mathf.Max(0, xp);
+		InitLevelData();
+		Save();
 	}
 
 	public void AddDroids(GameObject droid){
-		droids.Add(droid);
+		if(droid)
+			droids.Add(droid);
+		Save();
 	}
 
 	private void InitLevelData(){
@@ -48,4 +54,36 @@ public class Player : MonoBehaviour {
 		requiredXP = levelBase * level;
 	}
 
+	private void Save(){
+		BinaryFormatter bf = new BinaryFormatter();
+		FileStream file = File.Create(path);
+		PlayerData data = new PlayerData(this);
+		bf.Serialize(file, data);
+		file.Close();
+	}
+
+	private void Load(){
+		if(File.Exists(path)){
+			BinaryFormatter bf = new BinaryFormatter();
+			FileStream file = File.Open(path, FileMode.Open);
+			PlayerData data = (PlayerData) bf.Deserialize(file);
+			file.Close();
+
+			xp = data.Xp;
+			requiredXP = data.RequiredXp;
+			levelBase = data.LevelBase;
+			level = data.Level;
+
+			foreach(DroidData droidData in data.Droids){
+				if(droidData != null){
+					Droid droid = GetComponent<Droid>();
+					droid.LoadFromDroidData(droidData);
+					AddDroids(droid.gameObject);
+				}
+			}
+		}
+		else{
+			InitLevelData();
+		}
+	}
 }
