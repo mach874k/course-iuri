@@ -53,12 +53,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\Temp.cs" />
-     <Compile Include="Assets\Utilities\EasingControl.cs" />
-     <Compile Include="Assets\Utilities\EasingEquations.cs" />
-     <Compile Include="Assets\Utilities\TransformExtensions.cs" />
-     <Compile Include="Assets\Utilities\Tweener.cs" />
-     <Compile Include="Assets\Utilities\Vector3Tweener.cs" />
+     <Compile Include="Assets\Utilities\Animation\EasingControl.cs" />
+     <Compile Include="Assets\Utilities\Animation\EasingEquations.cs" />
+     <Compile Include="Assets\Utilities\Animation\TransformExtensions.cs" />
+     <Compile Include="Assets\Utilities\Animation\Tweener.cs" />
+     <Compile Include="Assets\Utilities\Animation\Vector3Tweener.cs" />
+     <Compile Include="Assets\Utilities\Social\Bar.cs" />
+     <Compile Include="Assets\Utilities\Social\Controller.cs" />
+     <Compile Include="Assets\Utilities\Social\Foo.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/Desktop/mach874k/course-iuri/TaticsRPG/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
