@@ -6,12 +6,14 @@ public class Demo : MonoBehaviour
 {
     void OnEnable()
     {
+        Debug.Log("OnEnable");
         InputController.moveEvent += OnMoveEvent;
         InputController.fireEvent += OnFireEvent;
     }
 
     void OnDisable()
     {
+        Debug.Log("OnDisable");
         InputController.moveEvent -= OnMoveEvent;
         InputController.fireEvent -= OnFireEvent;
     }
