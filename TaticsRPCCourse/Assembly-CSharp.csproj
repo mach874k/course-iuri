@@ -66,17 +66,26 @@
      <Compile Include="Assets\Scripts\Common\State Machine\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\BattleState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\InitBattleState.cs" />
+     <Compile Include="Assets\Scripts\Controller\Battle States\MoveSequenceState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\MoveTargetState.cs" />
+     <Compile Include="Assets\Scripts\Controller\Battle States\SelectUnitState.cs" />
      <Compile Include="Assets\Scripts\Controller\BattleController.cs" />
      <Compile Include="Assets\Scripts\Controller\InputController.cs" />
      <Compile Include="Assets\Scripts\Demo.cs" />
+     <Compile Include="Assets\Scripts\Enums\Directions.cs" />
      <Compile Include="Assets\Scripts\EventArgs\InfoEventArgs.cs" />
+     <Compile Include="Assets\Scripts\Extensions\DirectionsExtensions.cs" />
      <Compile Include="Assets\Scripts\Model\LevelData.cs" />
      <Compile Include="Assets\Scripts\Model\Point.cs" />
      <Compile Include="Assets\Scripts\PreProduction\BoardCreator.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Board.cs" />
      <Compile Include="Assets\Scripts\View Model Component\CameraRig.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Movement\FlyMovement.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Movement\Movement.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Movement\TeleportMovement.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Movement\WalkMovement.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Tile.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Unit.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/NB/Desktop/mach/course-iuri/TaticsRPCCourse/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
