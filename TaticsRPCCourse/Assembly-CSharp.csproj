@@ -53,8 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AnchorTest.cs" />
      <Compile Include="Assets\Scripts\Common\Animation\EasingControl.cs" />
      <Compile Include="Assets\Scripts\Common\Animation\EasingEquations.cs" />
+     <Compile Include="Assets\Scripts\Common\Animation\RectTransformAnchorPositionTweener.cs" />
+     <Compile Include="Assets\Scripts\Common\Animation\RectTransformAnimationExtensions.cs" />
      <Compile Include="Assets\Scripts\Common\Animation\TransformAnimationExtensions.cs" />
      <Compile Include="Assets\Scripts\Common\Animation\TransformLocalEulerTweener.cs" />
      <Compile Include="Assets\Scripts\Common\Animation\TransformLocalPositionTweener.cs" />
@@ -64,6 +67,8 @@
      <Compile Include="Assets\Scripts\Common\Animation\Vector3Tweener.cs" />
      <Compile Include="Assets\Scripts\Common\State Machine\State.cs" />
      <Compile Include="Assets\Scripts\Common\State Machine\StateMachine.cs" />
+     <Compile Include="Assets\Scripts\Common\UI\LayoutAnchor.cs" />
+     <Compile Include="Assets\Scripts\Common\UI\Panel.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\BattleState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\InitBattleState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\MoveSequenceState.cs" />
@@ -77,6 +82,7 @@
      <Compile Include="Assets\Scripts\Extensions\DirectionsExtensions.cs" />
      <Compile Include="Assets\Scripts\Model\LevelData.cs" />
      <Compile Include="Assets\Scripts\Model\Point.cs" />
+     <Compile Include="Assets\Scripts\PanelTests.cs" />
      <Compile Include="Assets\Scripts\PreProduction\BoardCreator.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Board.cs" />
      <Compile Include="Assets\Scripts\View Model Component\CameraRig.cs" />
