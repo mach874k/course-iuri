@@ -51,11 +51,15 @@ public class Panel : MonoBehaviour
 
     public Tweener SetPosition (string positionName, bool animated)
     {
+        Debug.Log("positionName: " + positionName +
+        "\nanimated: " + animated +
+        "\nthis[positionName]: " + this[positionName]);
         return SetPosition(this[positionName], animated);
     }
 
     public Tweener SetPosition (Position p, bool animated)
     {
+        Debug.Log("p: " + p.ToString());
         CurrentPosition = p;
         if (CurrentPosition == null)
             return null;
@@ -97,6 +101,11 @@ public class Panel : MonoBehaviour
         public Position (string name, TextAnchor myAnchor, TextAnchor parentAnchor, Vector2 offset) : this(name, myAnchor, parentAnchor)
         {
             this.offset = offset;
+        }
+
+        public override string ToString()
+        {
+            return ("name: " + this.name + "\nmyAnchor: " + this.myAnchor  + "\nparentAnchor: " + this.parentAnchor + "\noffset: " + this.offset);
         }
     }
 }

@@ -53,7 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\AssetCreator.cs" />
      <Compile Include="Assets\Editor\BoardCreatorInspector.cs" />
+     <Compile Include="Assets\Editor\ScriptableObjectUtility.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/NB/Desktop/mach/course-iuri/TaticsRPCCourse/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
