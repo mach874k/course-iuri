@@ -51,15 +51,11 @@ public class Panel : MonoBehaviour
 
     public Tweener SetPosition (string positionName, bool animated)
     {
-        Debug.Log("positionName: " + positionName +
-        "\nanimated: " + animated +
-        "\nthis[positionName]: " + this[positionName]);
         return SetPosition(this[positionName], animated);
     }
 
     public Tweener SetPosition (Position p, bool animated)
     {
-        Debug.Log("p: " + p.ToString());
         CurrentPosition = p;
         if (CurrentPosition == null)
             return null;

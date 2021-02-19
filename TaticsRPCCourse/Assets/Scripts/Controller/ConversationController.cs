@@ -72,18 +72,13 @@ public class ConversationController : MonoBehaviour
 
     void MovePanel (ConversationPanel obj, string pos)
     {
-        Debug.Log("obj: " + obj +
-        "\npos: " + pos +
-        "\nobj.panel: " + obj.panel);
         transition = obj.panel.SetPosition(pos, true);
-        Debug.Log("Transition: " + transition);
         transition.easingControl.duration = 0.5f;
         transition.easingControl.equation = EasingEquations.EaseOutQuad;
     }
 
     public void Show(ConversationData data)
     {
-        Debug.Log("conversationData: " + data);
         canvas.gameObject.SetActive(true);
         conversation = Sequence(data);
         conversation.MoveNext();
