@@ -87,6 +87,7 @@
      <Compile Include="Assets\Scripts\Controller\ConversationController.cs" />
      <Compile Include="Assets\Scripts\Controller\ExperienceManager.cs" />
      <Compile Include="Assets\Scripts\Controller\InputController.cs" />
+     <Compile Include="Assets\Scripts\Controller\StatPanelController.cs" />
      <Compile Include="Assets\Scripts\Demo.cs" />
      <Compile Include="Assets\Scripts\Enums\Directions.cs" />
      <Compile Include="Assets\Scripts\Enums\EquipSlots.cs" />
@@ -130,6 +131,7 @@
      <Compile Include="Assets\Scripts\View Model Component\Movement\Movement.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Movement\TeleportMovement.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Movement\WalkMovement.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\StatPanel.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Tile.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Unit.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
