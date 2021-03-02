@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\Common\UI\LayoutAnchor.cs" />
      <Compile Include="Assets\Scripts\Common\UI\Panel.cs" />
      <Compile Include="Assets\Scripts\Controller\AbilityMenuPanelController.cs" />
+     <Compile Include="Assets\Scripts\Controller\Battle States\AbilityTargetState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\ActionSelectionState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\BaseAbilityMenuState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\BattleState.cs" />
@@ -114,6 +115,12 @@
      <Compile Include="Assets\Scripts\PreProduction\BoardCreator.cs" />
      <Compile Include="Assets\Scripts\TestItems.cs" />
      <Compile Include="Assets\Scripts\TestLevelGrowth.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Range\AbilityRange.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Range\ConeAbilityRange.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Range\ConstantAbilityRange.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Range\InfiniteAbilityRange.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Range\LineAbilityRange.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Range\SelfAbilityRange.cs" />
      <Compile Include="Assets\Scripts\View Model Component\AbilityMenuEntry.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Actor\Equipment.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Actor\Job.cs" />
