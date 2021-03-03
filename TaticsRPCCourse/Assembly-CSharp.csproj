@@ -78,11 +78,14 @@
      <Compile Include="Assets\Scripts\Controller\Battle States\BattleState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\CategorySelectionState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\CommandSelectionState.cs" />
+     <Compile Include="Assets\Scripts\Controller\Battle States\ConfirmAbilityTargetState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\CutSceneState.cs" />
+     <Compile Include="Assets\Scripts\Controller\Battle States\EndFacingState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\ExploreState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\InitBattleState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\MoveSequenceState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\MoveTargetState.cs" />
+     <Compile Include="Assets\Scripts\Controller\Battle States\PerformAbilityState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\SelectUnitState.cs" />
      <Compile Include="Assets\Scripts\Controller\BattleController.cs" />
      <Compile Include="Assets\Scripts\Controller\ConversationController.cs" />
@@ -115,6 +118,13 @@
      <Compile Include="Assets\Scripts\PreProduction\BoardCreator.cs" />
      <Compile Include="Assets\Scripts\TestItems.cs" />
      <Compile Include="Assets\Scripts\TestLevelGrowth.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Area of Effect\AbilityArea.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Area of Effect\FullAbilityArea.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Area of Effect\SpecifyAbilityArea.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Area of Effect\UnitAbilityArea.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\AbilityEffectTarget.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\DefaultAbilityEffectTarget.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\KOdAbilityEffectTarget.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\AbilityRange.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\ConeAbilityRange.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\ConstantAbilityRange.cs" />
@@ -141,6 +151,15 @@
      <Compile Include="Assets\Scripts\View Model Component\StatPanel.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Tile.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Unit.cs" />
+ <Reference Include="Unity.ProBuilder">
+ <HintPath>C:/Users/NB/Desktop/mach/course-iuri/TaticsRPCCourse/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder.Editor">
+ <HintPath>C:/Users/NB/Desktop/mach/course-iuri/TaticsRPCCourse/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+ <HintPath>C:/Users/NB/Desktop/mach/course-iuri/TaticsRPCCourse/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/NB/Desktop/mach/course-iuri/TaticsRPCCourse/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -149,6 +168,9 @@
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>C:/Users/NB/Desktop/mach/course-iuri/TaticsRPCCourse/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder.AddOns.Editor">
+ <HintPath>C:/Users/NB/Desktop/mach/course-iuri/TaticsRPCCourse/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/NB/Desktop/mach/course-iuri/TaticsRPCCourse/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
