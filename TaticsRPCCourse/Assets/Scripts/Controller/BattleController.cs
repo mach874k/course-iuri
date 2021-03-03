@@ -13,6 +13,7 @@ public class BattleController : StateMachine
     public Tile currentTile{ get { return board.GetTile(pos); }}
     public AbilityMenuPanelController abilityMenuPanelController;
     public Turn turn = new Turn();
+    public IEnumerator round;
     public List<Unit> units = new List<Unit>();
     public StatPanelController statPanelController;
 

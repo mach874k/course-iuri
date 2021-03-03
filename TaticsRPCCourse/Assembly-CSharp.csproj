@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\Controller\ExperienceManager.cs" />
      <Compile Include="Assets\Scripts\Controller\InputController.cs" />
      <Compile Include="Assets\Scripts\Controller\StatPanelController.cs" />
+     <Compile Include="Assets\Scripts\Controller\TurnOrderController.cs" />
      <Compile Include="Assets\Scripts\Demo.cs" />
      <Compile Include="Assets\Scripts\Enums\Directions.cs" />
      <Compile Include="Assets\Scripts\Enums\EquipSlots.cs" />
