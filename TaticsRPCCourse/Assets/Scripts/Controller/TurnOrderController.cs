@@ -12,10 +12,11 @@ public class TurnOrderController : MonoBehaviour
     #endregion
 
     #region Notifications
-    public const string RoundBeganNotification = "TurnOrderController.roundBegan";
-    public const string TurnCheckNotification = "TurnOrderController.turnCheck";
-    public const string TurnCompletedNotification = "TurnOrderController.turnCompleted";
-    public const string RoundEndedNotification = "TurnOrderController.roundEnded";
+    public const string RoundBeganNotification = "TurnOrderController.RoundBegan";
+    public const string TurnBeganNotification = "TurnOrderController.TurnBeganNotification";
+    public const string TurnCheckNotification = "TurnOrderController.TurnCheck";
+    public const string TurnCompletedNotification = "TurnOrderController.TurnCompleted";
+    public const string RoundEndedNotification = "TurnOrderController.RoundEnded";
     #endregion
 
     #region Public
@@ -40,6 +41,7 @@ public class TurnOrderController : MonoBehaviour
                 if(CanTakeTurn(units[i]))
                 {
                     battleController.turn.Change(units[i]);
+                    units[i].PostNotification(TurnBeganNotification);
                     yield return units[i];
 
                     int cost = turnCost;
