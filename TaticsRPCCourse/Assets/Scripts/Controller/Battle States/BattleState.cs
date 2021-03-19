@@ -14,6 +14,7 @@ public class BattleState : State
     public Turn turn { get { return owner.turn; }}
     public List<Unit> units { get { return owner.units; }}
     public StatPanelController statPanelController { get { return owner.statPanelController; }}
+    public HitSuccessIndicator hitSuccessIndicator { get { return owner.hitSuccessIndicator; }}
 
     protected virtual void Awake()
     {

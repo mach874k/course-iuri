@@ -34,6 +34,11 @@ public struct Point
         return !(a == b);
     }
 
+    public static implicit operator Vector2(Point p)
+    {
+        return new Vector2(p.x, p.y);
+    }
+
     public override bool Equals (object obj)
     {
         if (obj is Point)

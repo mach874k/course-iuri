@@ -96,9 +96,11 @@
      <Compile Include="Assets\Scripts\Demo.cs" />
      <Compile Include="Assets\Scripts\Enums\Directions.cs" />
      <Compile Include="Assets\Scripts\Enums\EquipSlots.cs" />
+     <Compile Include="Assets\Scripts\Enums\Facings.cs" />
      <Compile Include="Assets\Scripts\Enums\StatTypes.cs" />
      <Compile Include="Assets\Scripts\EventArgs\InfoEventArgs.cs" />
      <Compile Include="Assets\Scripts\Exceptions\BaseException.cs" />
+     <Compile Include="Assets\Scripts\Exceptions\MatchException.cs" />
      <Compile Include="Assets\Scripts\Exceptions\Modifiers\AddValueModifier.cs" />
      <Compile Include="Assets\Scripts\Exceptions\Modifiers\ClampValueModifier.cs" />
      <Compile Include="Assets\Scripts\Exceptions\Modifiers\MaxValueModifier.cs" />
@@ -109,8 +111,10 @@
      <Compile Include="Assets\Scripts\Exceptions\Modifiers\ValueChangeException.cs" />
      <Compile Include="Assets\Scripts\Exceptions\Modifiers\ValueModifier.cs" />
      <Compile Include="Assets\Scripts\Extensions\DirectionsExtensions.cs" />
+     <Compile Include="Assets\Scripts\Extensions\FacingsExtensions.cs" />
      <Compile Include="Assets\Scripts\Extensions\GameObjectExtensions.cs" />
      <Compile Include="Assets\Scripts\Model\ConversationData.cs" />
+     <Compile Include="Assets\Scripts\Model\Info.cs" />
      <Compile Include="Assets\Scripts\Model\LevelData.cs" />
      <Compile Include="Assets\Scripts\Model\Point.cs" />
      <Compile Include="Assets\Scripts\Model\SpeakerData.cs" />
@@ -129,6 +133,10 @@
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\AbilityEffectTarget.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\DefaultAbilityEffectTarget.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\KOdAbilityEffectTarget.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Hit Rate\ATypeHitRate.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Hit Rate\FullTypeHitRate.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Hit Rate\HitRate.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Hit Rate\STypeHitRate.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\AbilityRange.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\ConeAbilityRange.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\ConstantAbilityRange.cs" />
@@ -147,6 +155,7 @@
      <Compile Include="Assets\Scripts\View Model Component\Features\AddStatusFeature.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Features\Feature.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Features\StatModifierFeature.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\HitSuccessIndicator.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Item\Consumable.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Item\Equippable.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Item\Merchandise.cs" />
@@ -157,6 +166,7 @@
      <Compile Include="Assets\Scripts\View Model Component\StatPanel.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Conditions\DurationStatusCondition.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Conditions\StatusCondition.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Status\Effects\BlindStatusEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Effects\HasteStatusEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Effects\PoisonStatusEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Effects\SlowStatusEffect.cs" />
