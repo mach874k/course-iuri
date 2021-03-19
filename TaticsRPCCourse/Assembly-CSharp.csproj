@@ -115,6 +115,7 @@
      <Compile Include="Assets\Scripts\Extensions\GameObjectExtensions.cs" />
      <Compile Include="Assets\Scripts\Model\ConversationData.cs" />
      <Compile Include="Assets\Scripts\Model\Info.cs" />
+     <Compile Include="Assets\Scripts\Model\Item.cs" />
      <Compile Include="Assets\Scripts\Model\LevelData.cs" />
      <Compile Include="Assets\Scripts\Model\Point.cs" />
      <Compile Include="Assets\Scripts\Model\SpeakerData.cs" />
@@ -123,6 +124,12 @@
      <Compile Include="Assets\Scripts\NotificationCenter\NotificationExtensions.cs" />
      <Compile Include="Assets\Scripts\PanelTests.cs" />
      <Compile Include="Assets\Scripts\PreProduction\BoardCreator.cs" />
+     <Compile Include="Assets\Scripts\PreProduction\ItemGenerator.cs" />
+     <Compile Include="Assets\Scripts\Shop\Bank.cs" />
+     <Compile Include="Assets\Scripts\Shop\BankView.cs" />
+     <Compile Include="Assets\Scripts\Shop\DialogController.cs" />
+     <Compile Include="Assets\Scripts\Shop\ItemCell.cs" />
+     <Compile Include="Assets\Scripts\Shop\ItemShop.cs" />
      <Compile Include="Assets\Scripts\StatusEffectDemo.cs" />
      <Compile Include="Assets\Scripts\TestItems.cs" />
      <Compile Include="Assets\Scripts\TestLevelGrowth.cs" />
@@ -175,6 +182,9 @@
      <Compile Include="Assets\Scripts\View Model Component\Status\Status.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Tile.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Unit.cs" />
+     <None Include="Assets\Textures\Shop Textures\Attribution.txt" />
+     <None Include="Assets\Fonts\NevisAttribution.txt" />
+     <None Include="Assets\Textures\Shop Textures\UI Pack\license.txt" />
  <Reference Include="Unity.ProBuilder">
  <HintPath>C:/Users/NB/Desktop/mach/course-iuri/TaticsRPCCourse/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
  </Reference>
