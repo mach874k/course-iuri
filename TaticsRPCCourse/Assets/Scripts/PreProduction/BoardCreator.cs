@@ -50,6 +50,30 @@ public class BoardCreator : MonoBehaviour
         ShrinkRect(r);
     }
 
+    public void GrowFlatArea()
+    {
+        Rect r = new Rect(0, 0, width, depth);
+        GrowRect(r);
+    }
+
+    public void GrowFlatArea(int x, int y)
+    {
+        Rect r = new Rect(pos.x, pos.y, x+1, y+1);
+        GrowRect(r);
+    }
+
+    public void ShrinkFlatArea()
+    {
+        Rect r = new Rect(0, 0, width, depth);
+        ShrinkRect(r);
+    }
+
+    public void ShrinkFlatArea(int x, int y)
+    {
+        Rect r = new Rect(pos.x, pos.y, x+1, y+1);
+        ShrinkRect(r);
+    }
+
     public void UpdateMarker()
     {
         Tile t = tiles.ContainsKey(pos)? tiles[pos] : null;
