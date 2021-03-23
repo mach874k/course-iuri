@@ -140,10 +140,17 @@
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\AbilityEffectTarget.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\DefaultAbilityEffectTarget.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\KOdAbilityEffectTarget.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Effects\BaseAbilityEffect.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Effects\DamageAbilityEffect.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Effects\InflictAbilityEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Hit Rate\ATypeHitRate.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Hit Rate\FullTypeHitRate.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Hit Rate\HitRate.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Hit Rate\STypeHitRate.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Power\BaseAbilityPower.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Power\MagicalAbilityPower.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Power\PhysicalAbilityPower.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Power\WeaponAbilityPower.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\AbilityRange.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\ConeAbilityRange.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\ConstantAbilityRange.cs" />
