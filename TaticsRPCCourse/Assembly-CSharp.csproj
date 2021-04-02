@@ -94,9 +94,11 @@
      <Compile Include="Assets\Scripts\Controller\StatPanelController.cs" />
      <Compile Include="Assets\Scripts\Controller\TurnOrderController.cs" />
      <Compile Include="Assets\Scripts\Demo.cs" />
+     <Compile Include="Assets\Scripts\Enums\Alliances.cs" />
      <Compile Include="Assets\Scripts\Enums\Directions.cs" />
      <Compile Include="Assets\Scripts\Enums\EquipSlots.cs" />
      <Compile Include="Assets\Scripts\Enums\Facings.cs" />
+     <Compile Include="Assets\Scripts\Enums\Locomotions.cs" />
      <Compile Include="Assets\Scripts\Enums\StatTypes.cs" />
      <Compile Include="Assets\Scripts\EventArgs\InfoEventArgs.cs" />
      <Compile Include="Assets\Scripts\Exceptions\BaseException.cs" />
@@ -113,6 +115,9 @@
      <Compile Include="Assets\Scripts\Extensions\DirectionsExtensions.cs" />
      <Compile Include="Assets\Scripts\Extensions\FacingsExtensions.cs" />
      <Compile Include="Assets\Scripts\Extensions\GameObjectExtensions.cs" />
+     <Compile Include="Assets\Scripts\Factory\AbilityCatalogRecipe.cs" />
+     <Compile Include="Assets\Scripts\Factory\UnitFactory.cs" />
+     <Compile Include="Assets\Scripts\Factory\UnitRecipe.cs" />
      <Compile Include="Assets\Scripts\Model\ConversationData.cs" />
      <Compile Include="Assets\Scripts\Model\Info.cs" />
      <Compile Include="Assets\Scripts\Model\Item.cs" />
@@ -165,6 +170,7 @@
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\LineAbilityRange.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\SelfAbilityRange.cs" />
      <Compile Include="Assets\Scripts\View Model Component\AbilityMenuEntry.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Actor\Alliance.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Actor\Equipment.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Actor\Health.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Actor\Job.cs" />

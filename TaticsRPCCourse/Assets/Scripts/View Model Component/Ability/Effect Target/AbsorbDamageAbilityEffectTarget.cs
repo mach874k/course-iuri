@@ -38,6 +38,8 @@ public class AbsorbDamageAbilityEffectTarget : BaseAbilityEffect
     protected override int OnApply(Tile target)
     {
         Stats s = GetComponentInParent<Stats>();
+        Debug.Log("AbsorbDamageAbilityEffectTarget OnApply target: " + target +
+                    "\ns: " + s + "\namount: " + amount);
         s[StatTypes.HP] += amount;
         return amount;
     }
@@ -46,7 +48,9 @@ public class AbsorbDamageAbilityEffectTarget : BaseAbilityEffect
     #region Event Handlers
     void OnEffectHit(object sender, object args)
     {
-        amount = (int)args;
+        Debug.Log("AbsorbDamageAbilityEffectTarget OnEffectHit sender: " + sender +
+                    "\nargs: " + args);
+        amount = (int)args * -1;
     }
 
     void OnEffectMiss(object sender, object args)
