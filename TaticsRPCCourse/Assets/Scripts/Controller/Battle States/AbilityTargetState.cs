@@ -42,8 +42,12 @@ public class AbilityTargetState : BattleState
     {
         if(e.info == 0)
         {
-            if(abilityRange.directionOriented || tiles.Contains(board.GetTile(pos)))
+            if(abilityRange.directionOriented || tiles.Contains(board.GetTile(pos))){
+                Debug.Log("AbilityTargetState\n" +
+                            "turn.actor: " + turn.actor.name +
+                            "\nturn.ability: " + turn.ability.name);
                 owner.ChangeState<ConfirmAbilityTargetState>();
+            }
         }
         else
         {

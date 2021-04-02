@@ -9,6 +9,7 @@ public class KOdAbilityEffectTarget : AbilityEffectTarget
         if(tile == null || tile.content == null)
             return false;
         
+        Debug.Log("KOdAbilityEffectTarget tile: " + tile.content);
         Stats s = tile.content.GetComponent<Stats>();
         return s != null && s[StatTypes.HP] <= 0;
     }

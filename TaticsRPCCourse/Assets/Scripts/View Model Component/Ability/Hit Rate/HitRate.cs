@@ -40,6 +40,15 @@ public abstract class HitRate : MonoBehaviour
     /// an ability succeeding to hit
     /// </summary>
     public abstract int Calculate(Tile target);
+
+    public virtual bool RollForHit (Tile target)
+	{
+		int roll = UnityEngine.Random.Range(0, 101);
+		int chance = Calculate(target);
+        Debug.Log("HitRate roll: " + roll +
+                    "\nchance: " + chance);
+		return roll <= chance;
+	}
     #endregion
 
     #region Protected

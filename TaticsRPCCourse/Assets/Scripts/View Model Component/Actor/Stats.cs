@@ -30,7 +30,11 @@ public class Stats : MonoBehaviour
 
     public void SetValue (StatTypes type, int value, bool allowExceptions)
     {
+        Debug.Log("Stats SetValue type: " + type + "\nvalue: " + value +
+                    "\nallowExceptions: " + allowExceptions);
+
         int oldValue = this[type];
+        Debug.Log("Stats SetValue oldValue: " + oldValue);
         if (oldValue == value)
             return;
         
@@ -38,19 +42,19 @@ public class Stats : MonoBehaviour
         {
             // Allow exceptions to the rule here
             ValueChangeException exc = new ValueChangeException( oldValue, value );
-            
             // The notification is unique per stat type
             this.PostNotification(WillChangeNotification(type), exc);
             
             // Did anything modify the value?
             value = Mathf.FloorToInt(exc.GetModifiedValue());
-            
+            Debug.Log("Stats SetValue value: " + value + "\nexc.toogle: " + exc.toggle);
             // Did something nullify the change?
             if (exc.toggle == false || value == oldValue)
                 return;
         }
         
         _data[(int)type] = value;
+        Debug.Log("Stats SetValue _data[" + (int)type + "]: " + _data[(int)type]);
         this.PostNotification(DidChangeNotification(type), oldValue);
     }
 }

@@ -7,16 +7,21 @@ public class ATypeHitRate : HitRate
     public override int Calculate(Tile target)
     {
         Unit defender = target.content.GetComponent<Unit>();
-		if(AutomaticHit(defender))
+		if(AutomaticHit(defender)){
+            Debug.Log("ATypeHitRate hit!");
             return Final(0);
+        }
         
-        if(AutomaticMiss(defender))
+        if(AutomaticMiss(defender)){
+            Debug.Log("ATypeHitRate miss!");
             return Final(100);
+        }
         
         int evade = GetEvade(defender);
         evade = AdjustForRelativeFacing(defender, evade);
         evade = AdjustForStatusEffects(defender, evade);
         evade = Mathf.Clamp(evade, 5, 95);
+        Debug.Log("ATypeHitRate evade: " + evade);
         return Final(evade);
     }
 

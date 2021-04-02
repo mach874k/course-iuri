@@ -33,9 +33,13 @@ public class ValueChangeException : BaseException
 			return toValue;
 		
 		float value = toValue;
+		Debug.Log("ValueChangeException value: " + value);
 		modifiers.Sort(Compare);
-		for(int i = 0; i < modifiers.Count; ++i)
+		for(int i = 0; i < modifiers.Count; ++i){
 			value = modifiers[i].Modify(fromValue, value);
+			Debug.Log("ValueChangeException modifier[" + i + "]: " + modifiers[i] +
+						"\nvalue: " + value);
+		}
 		
 		return value;
 	}

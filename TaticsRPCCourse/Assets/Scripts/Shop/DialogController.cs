@@ -40,8 +40,8 @@ public class DialogController : MonoBehaviour
 
 	void StopAnimation ()
 	{
-		if (tweener != null && tweener.easingControl != null && tweener.easingControl.IsPlaying)
-			tweener.easingControl.Stop();
+		if (tweener != null && tweener != null && tweener.IsPlaying)
+			tweener.Stop();
 	}
 
 	public void OnConfirmButton ()

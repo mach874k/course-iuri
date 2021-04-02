@@ -49,8 +49,13 @@ public class InitBattleState : BattleState
 
             units.Add(unit);
 
-            // Rank rank = instance.AddComponent<Rank>();
-            // rank.Init (10);
+            Rank rank = instance.AddComponent<Rank>();
+            rank.Init (10);
+            
+            instance.AddComponent<Health>();
+			instance.AddComponent<Mana>();
+
+			instance.name = jobs[i];
         }
     }
 }
