@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseException
 {
-    private bool defaultToggle;
+    public readonly bool defaultToggle;
     public bool toggle { get; private set; }
 
     public BaseException(bool defaultToggle)

@@ -10,6 +10,7 @@ public class BattleController : StateMachine
     public Transform tileSelectionIndicator;
     public Point pos;
     public GameObject heroPrefab;
+    public FacingIndicator facingIndicator;
     public Tile currentTile{ get { return board.GetTile(pos); }}
     public AbilityMenuPanelController abilityMenuPanelController;
     public Turn turn = new Turn();

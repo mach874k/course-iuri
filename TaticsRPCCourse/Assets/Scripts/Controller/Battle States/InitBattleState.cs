@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,11 +18,21 @@ public class InitBattleState : BattleState
         Point p = new Point((int)levelData.tiles[0].x, (int)levelData.tiles[0].z);
         SelectTile(p);
         SpawnTestUnits();
+        AddVictoryCondition();
         yield return null;
         owner.ChangeState<CutSceneState>();
     }
 
-    void SpawnTestUnits()
+    void AddVictoryCondition()
+    {
+        DefeatTargetVictoryCondition victoryCondition = owner.gameObject.AddComponent<DefeatTargetVictoryCondition>();
+        Unit enemy = units[units.Count - 1];
+        victoryCondition.target = enemy;
+        Health health = enemy.GetComponent<Health>();
+        health.MinHP = 10;
+    }
+
+  void SpawnTestUnits()
     {
         string[] recipes = new string[]
         {

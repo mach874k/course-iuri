@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\Common\UI\LayoutAnchor.cs" />
      <Compile Include="Assets\Scripts\Common\UI\Panel.cs" />
      <Compile Include="Assets\Scripts\Controller\AbilityMenuPanelController.cs" />
+     <Compile Include="Assets\Scripts\Controller\AutoStatusController.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\AbilityTargetState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\ActionSelectionState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\BaseAbilityMenuState.cs" />
@@ -80,6 +81,7 @@
      <Compile Include="Assets\Scripts\Controller\Battle States\CommandSelectionState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\ConfirmAbilityTargetState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\CutSceneState.cs" />
+     <Compile Include="Assets\Scripts\Controller\Battle States\EndBattleState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\EndFacingState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\ExploreState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\InitBattleState.cs" />
@@ -93,6 +95,9 @@
      <Compile Include="Assets\Scripts\Controller\InputController.cs" />
      <Compile Include="Assets\Scripts\Controller\StatPanelController.cs" />
      <Compile Include="Assets\Scripts\Controller\TurnOrderController.cs" />
+     <Compile Include="Assets\Scripts\Controller\Victory Conditions\BaseVictoryCondition.cs" />
+     <Compile Include="Assets\Scripts\Controller\Victory Conditions\DefeatAllEnemiesVictoryCondition.cs" />
+     <Compile Include="Assets\Scripts\Controller\Victory Conditions\DefeatTargetVictoryCondition.cs" />
      <Compile Include="Assets\Scripts\Demo.cs" />
      <Compile Include="Assets\Scripts\Enums\Alliances.cs" />
      <Compile Include="Assets\Scripts\Enums\Directions.cs" />
@@ -181,6 +186,7 @@
      <Compile Include="Assets\Scripts\View Model Component\Board.cs" />
      <Compile Include="Assets\Scripts\View Model Component\CameraRig.cs" />
      <Compile Include="Assets\Scripts\View Model Component\ConversationPanel.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\FacingIndicator.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Features\AddPoisonStatusFeature.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Features\AddStatusFeature.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Features\Feature.cs" />
@@ -195,9 +201,11 @@
      <Compile Include="Assets\Scripts\View Model Component\Movement\WalkMovement.cs" />
      <Compile Include="Assets\Scripts\View Model Component\StatPanel.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Conditions\DurationStatusCondition.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Status\Conditions\StatComparisonCondition.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Conditions\StatusCondition.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Effects\BlindStatusEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Effects\HasteStatusEffect.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Status\Effects\KnockOutStatusEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Effects\PoisonStatusEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Effects\SlowStatusEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Status\Effects\StatusEffect.cs" />

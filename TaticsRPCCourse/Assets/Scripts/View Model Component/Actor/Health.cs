@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    #region Fields
+    #region Fields & Properties
     public int HP
     {
         get { return stats[StatTypes.HP]; }
@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
         set { stats[StatTypes.MHP] = value; }
     }
 
+    public int MinHP = 0;
     Stats stats;
     #endregion
 
@@ -44,7 +45,7 @@ public class Health : MonoBehaviour
     {
         Debug.Log("Health OnHPWillChange sender: " + sender + "\nargs: " + args);
         ValueChangeException vce = args as ValueChangeException;
-        vce.AddModifier(new ClampValueModifier(int.MaxValue, 0, stats[StatTypes.MHP]));
+        vce.AddModifier(new ClampValueModifier(int.MaxValue, MinHP, stats[StatTypes.MHP]));
     }
 
     void OnMHPDidChange(object sender, object args)
@@ -54,7 +55,7 @@ public class Health : MonoBehaviour
         if(MHP > oldMHP)
             HP += oldMHP - oldMHP;
         else
-            HP = Mathf.Clamp(HP, 0, MHP);
+            HP = Mathf.Clamp(HP, MinHP, MHP);
     }
     #endregion
 }
