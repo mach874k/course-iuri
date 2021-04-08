@@ -5,6 +5,7 @@ using UnityEngine;
 public class BattleState : State
 {
     protected BattleController owner;
+    protected Driver driver;
     public CameraRig cameraRig { get { return owner.cameraRig; }}
     public Board board { get  { return owner.board; }}
     public LevelData levelData { get { return owner.levelData; }}
@@ -23,8 +24,11 @@ public class BattleState : State
 
     protected override void AddListeners()
     {
-        InputController.moveEvent += OnMove;
-        InputController.fireEvent += OnFire;
+        if(driver == null || driver.Current == Drivers.Human)
+        {
+            InputController.moveEvent += OnMove;
+            InputController.fireEvent += OnFire;   
+        }
     }
 
     protected override void RemoveListeners()
@@ -83,5 +87,11 @@ public class BattleState : State
     protected virtual bool IsBattleOver()
     {
         return owner.GetComponent<BaseVictoryCondition>().Victor != Alliances.None;
+    }
+
+    public override void Enter()
+    {
+        driver = (turn.actor != null) ? turn.actor.GetComponent<Driver>() : null;
+        base.Enter();
     }
 }

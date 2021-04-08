@@ -18,6 +18,8 @@ public class BattleController : StateMachine
     public List<Unit> units = new List<Unit>();
     public StatPanelController statPanelController;
     public HitSuccessIndicator hitSuccessIndicator;
+    public BattleMessageController battleMessageController;
+    public ComputerPlayer cpu;
 
     void Start()
     {

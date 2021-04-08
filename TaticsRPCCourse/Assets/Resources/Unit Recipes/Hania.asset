@@ -16,5 +16,6 @@ MonoBehaviour:
   job: Wizard
   attack: Common/Attack
   abilityCatalog: DemoCatalog
-  locomotion: 0
+  locomotion: 2
   alliance: 2
+  strategy: 

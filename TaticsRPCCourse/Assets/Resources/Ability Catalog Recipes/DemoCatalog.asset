@@ -18,6 +18,7 @@ MonoBehaviour:
     - Cure
     - Raise
     - Holy
+    - Esuna
   - name: Sagacity Skill
     entries:
     - Water

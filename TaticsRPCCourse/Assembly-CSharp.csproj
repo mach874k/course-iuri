@@ -90,6 +90,7 @@
      <Compile Include="Assets\Scripts\Controller\Battle States\PerformAbilityState.cs" />
      <Compile Include="Assets\Scripts\Controller\Battle States\SelectUnitState.cs" />
      <Compile Include="Assets\Scripts\Controller\BattleController.cs" />
+     <Compile Include="Assets\Scripts\Controller\BattleMessageController.cs" />
      <Compile Include="Assets\Scripts\Controller\ConversationController.cs" />
      <Compile Include="Assets\Scripts\Controller\ExperienceManager.cs" />
      <Compile Include="Assets\Scripts\Controller\InputController.cs" />
@@ -101,10 +102,12 @@
      <Compile Include="Assets\Scripts\Demo.cs" />
      <Compile Include="Assets\Scripts\Enums\Alliances.cs" />
      <Compile Include="Assets\Scripts\Enums\Directions.cs" />
+     <Compile Include="Assets\Scripts\Enums\Drivers.cs" />
      <Compile Include="Assets\Scripts\Enums\EquipSlots.cs" />
      <Compile Include="Assets\Scripts\Enums\Facings.cs" />
      <Compile Include="Assets\Scripts\Enums\Locomotions.cs" />
      <Compile Include="Assets\Scripts\Enums\StatTypes.cs" />
+     <Compile Include="Assets\Scripts\Enums\Targets.cs" />
      <Compile Include="Assets\Scripts\EventArgs\InfoEventArgs.cs" />
      <Compile Include="Assets\Scripts\Exceptions\BaseException.cs" />
      <Compile Include="Assets\Scripts\Exceptions\MatchException.cs" />
@@ -153,10 +156,12 @@
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\AbilityEffectTarget.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\AbsorbDamageAbilityEffectTarget.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\DefaultAbilityEffectTarget.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\EnemyAbilityEffectTarget.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\KOdAbilityEffectTarget.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effect Target\UndeadAbilityEffectTarget.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effects\BaseAbilityEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effects\DamageAbilityEffect.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Ability\Effects\EsunaAbilityEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effects\HealAbilityEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effects\InflictAbilityEffect.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Ability\Effects\ReviveAbilityEffect.cs" />
@@ -176,6 +181,7 @@
      <Compile Include="Assets\Scripts\View Model Component\Ability\Range\SelfAbilityRange.cs" />
      <Compile Include="Assets\Scripts\View Model Component\AbilityMenuEntry.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Actor\Alliance.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\Actor\Driver.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Actor\Equipment.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Actor\Health.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Actor\Job.cs" />
@@ -183,6 +189,12 @@
      <Compile Include="Assets\Scripts\View Model Component\Actor\Rank.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Actor\Stats.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Actor\Undead.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\AI\Ability Picker\BaseAbilityPicker.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\AI\Ability Picker\FixedAbilityPicker.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\AI\Ability Picker\RandomAbilityPicker.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\AI\AttackPattern.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\AI\ComputerPlayer.cs" />
+     <Compile Include="Assets\Scripts\View Model Component\AI\PlanOfAttack.cs" />
      <Compile Include="Assets\Scripts\View Model Component\Board.cs" />
      <Compile Include="Assets\Scripts\View Model Component\CameraRig.cs" />
      <Compile Include="Assets\Scripts\View Model Component\ConversationPanel.cs" />
