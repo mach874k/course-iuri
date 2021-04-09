@@ -14,7 +14,7 @@ public class AbilityTargetState : BattleState
         SelectTiles();
         statPanelController.ShowPrimary(turn.actor.gameObject);
         if(abilityRange.directionOriented)
-            RefreshSecondaryStatPanel(pos);
+            statPanelController.HideSecondary();
         if(driver.Current == Drivers.Computer)
 			StartCoroutine(ComputerHighlightTarget());
     }
@@ -29,6 +29,7 @@ public class AbilityTargetState : BattleState
 
     protected override void OnMove(object sender, InfoEventArgs<Point> e)
     {
+        Debug.Log("AbilityTargetState OnMove");
         if(abilityRange.directionOriented)
         {
             ChangeDirection(e.info);

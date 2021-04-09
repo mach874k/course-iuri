@@ -39,6 +39,7 @@ public abstract class HitRate : MonoBehaviour
     /// Returns a value in the range of 0 t0 100 as a percent chance of
     /// an ability succeeding to hit
     /// </summary>
+    public virtual bool IsAngleBased { get { return true; }}
     public abstract int Calculate(Tile target);
 
     public virtual bool RollForHit (Tile target)

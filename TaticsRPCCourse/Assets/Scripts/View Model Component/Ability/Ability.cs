@@ -15,6 +15,18 @@ public class Ability : MonoBehaviour
 		return exc.toggle;
 	}
 
+	public bool IsTarget(Tile tile)
+	{
+		Transform obj = transform;
+		for (int i = 0; i < obj.childCount; ++i)
+		{
+			AbilityEffectTarget targeter = obj.GetChild(i).GetComponent<AbilityEffectTarget>();
+			if (targeter.IsTarget(tile))
+				return true;
+		}
+		return false;
+	}
+
 	public void Perform (List<Tile> targets)
 	{
 		if (!CanPerform())

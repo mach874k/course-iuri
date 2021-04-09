@@ -65,11 +65,11 @@ public class TurnOrderController : MonoBehaviour
     #region Private
     bool CanTakeTurn(Unit target)
     {
-        // OPTIONAL === Add this bit to skip the player turns so you can just watch
-        Alliance a = target.GetComponentInChildren<Alliance>();
-        if (a.type == Alliances.Hero)
-            return false;
-        // === END OPTIONAL
+        // // OPTIONAL === Add this bit to skip the player turns so you can just watch
+        // Alliance a = target.GetComponentInChildren<Alliance>();
+        // if (a.type == Alliances.Hero)
+        //     return false;
+        // // === END OPTIONAL
 
         BaseException exc = new BaseException(GetCounter(target) >= turnActivation);
         target.PostNotification(TurnCheckNotification, exc);
