@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasePooler : MonoBehaviour
+public abstract class BasePooler : MonoBehaviour
 {
     public string key = string.Empty;
     public GameObject prefab = null;
